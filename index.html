@@ -8,6 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand|Sue+Ellen+Francisco" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet"/>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  
     <!-- add bootstrap  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
     <title>Let's Travel</title>
@@ -38,8 +42,7 @@
         <div id="newyork"> NYC </div>
         <div class="chooseDiv">
         
-          <input type="button" value="Let's Travel!!!" name="submit"  id="btn-ClientSubmit">  </input>
-        
+          <input type="button" value="Let's Travel!!!" name="submit"  id="btn-ClientSubmit" />
         </div>
     </div>
     </div>
@@ -60,45 +63,41 @@
       
     </div>
     <div class="row results w-100 h-75 m-auto p-0"> 
-      <div class="col-sm-4 weather-results align-self-center m-auto p-0">
+      <div class="col-sm-4 colr weather-results align-self-center m-auto p-0">
         <div class="resultInfo destinationWeather">
           <div class="temp"></div>
           <div class="mintemp"></div>
           <div class="maxtemp"></div>
         </div>
       </div>
-      <div class="col-sm-4 ticketPrice-results align-self-center m-auto p-0">
+      <div class="col-sm-4 colr ticketPrice-results align-self-center m-auto p-0">
         <div class="resultInfo from"></div>
         <div class="resultInfo to"></div>
         <div class="resultInfo price"></div>
       </div>
-      <div class="col-sm-4 pictures-results align-self-center m-auto p-0">
-
-      </div>
+      <div class="col-sm-4 colr pictures-results align-self-center m-auto p-0">  </div>
     </div>
   </div>
+
     <div class="footer w-100"> <footer>&copy; <b>Copyright 2019</b> 
-    
+    <button class="btn btn-secondary py-0 my-1" id="myBtn" onclick="vidFunction()">||</button>
     </div>
       
     <script>
-        var video = document.getElementById("myVideo");
+        var video = document.getElementById("myVideo"); 
         var btn = document.getElementById("myBtn");
         
-        function myFunction() {
+        function vidFunction() {
           if (video.paused) {
             video.play();
-            btn.innerHTML = "Pause";
+            btn.innerHTML = "||";
           } else {
             video.pause();
-            btn.innerHTML = "Play";
+            btn.innerHTML = ">";
           }
         }
         </script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="assets/js/main.js"></script>
-  
   </body>
 
  </html>
